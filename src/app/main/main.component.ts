@@ -10,6 +10,7 @@ export class MainComponent implements OnInit {
 
   movies: any = [];
   selectedMovie = null;
+  editMovie = false;
 
   constructor(private api:ApiService) { }
 

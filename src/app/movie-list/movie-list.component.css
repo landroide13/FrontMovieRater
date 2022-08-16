@@ -1,0 +1,15 @@
+ul{
+    list-style: none;
+}
+
+li{
+    display: flex;
+    justify-items:flex-start;
+    justify-content: space-between;
+}
+
+i{
+    font-size: 1.4em;
+    cursor: pointer;
+}
+

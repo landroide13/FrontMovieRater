@@ -1,5 +1,11 @@
 <h1>Movie-list</h1>
 
-<ul *ngFor="let movie of movies" (click)="movieClicked(movie)">
-    <li>{{ movie.title }}</li>
+<ul *ngFor="let movie of movies" >
+    <li>
+        <h3 (click)="movieClicked(movie)">{{ movie.title }}</h3>
+        <i class="bi bi-pen-fill"></i>
+        <i class="bi bi-trash"></i>
+    </li>
 </ul>
+
+<button class="btn btn-lg btn-success">New Movie</button>
