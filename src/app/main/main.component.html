@@ -1,1 +1,20 @@
-<p>Movies</p>
+<h3>Movies</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <app-movie-list [movies]="movies" (selectMovie)="selectMovie($event)"></app-movie-list>
+        </div>
+        
+        <div class="col-md-6">
+            <app-movie-details [movie]="this.selectedMovie"></app-movie-details>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+
