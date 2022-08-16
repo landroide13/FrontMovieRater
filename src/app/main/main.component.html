@@ -7,7 +7,7 @@
         </div>
         
         <div class="col-md-6">
-            <app-movie-details [movie]="this.selectedMovie"></app-movie-details>
+            <app-movie-details [movie]="this.selectedMovie" (updateMovie)="selectMovie($event)"></app-movie-details>
         </div>
         
     </div>
