@@ -8,6 +8,8 @@ import { MovieFormComponent } from '../movie-form/movie-form.component';
 
 import { ApiService } from '../api.service';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ApiService } from '../api.service';
     MovieFormComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ApiService],
 })

@@ -10,6 +10,8 @@ import { MainModule } from './main/main.module';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -24,6 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     AuthModule,
     MainModule, 
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     
   ],
   providers: [],

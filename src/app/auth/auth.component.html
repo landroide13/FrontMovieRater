@@ -1,1 +1,28 @@
-<p>auth works!</p>
+<h1>Welcome MovieRate App</h1>
+
+
+<div class="card" style="width: 18rem;">
+
+    <div class="card-body">
+
+        <form action="" [formGroup]="authForm" (submit)="saveForm()">
+
+            <div class="mb-3">
+                <label for="title" class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="">
+            </div>
+
+            <div class="mb-3"> 
+                <label for="description" class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="">
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Log In 
+            </button>
+
+        </form>
+
+    </div>
+    
+</div>    
