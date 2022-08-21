@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-main',
@@ -12,7 +13,7 @@ export class MainComponent implements OnInit {
   selectedMovie = null;
   editMovie: any;
 
-  constructor(private api:ApiService) { }
+  constructor(private api:ApiService, private cookie: CookieService) { }
 
   ngOnInit(): void {  
     this.api.getMovies().subscribe(data => {
@@ -57,6 +58,10 @@ export class MainComponent implements OnInit {
     if(idx >= 0){
       this.movies[idx] = movie
     }
+  }
+
+  logout(){
+    this.cookie.delete('mv-token')
   }
 
 }

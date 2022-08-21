@@ -15,7 +15,13 @@
             <app-movie-form *ngIf="editMovie" [movie]="this.editMovie"
              (movieCreated)="movieCreated($event)" (movieUpdated)="movieUpdated($event)"></app-movie-form>
         </div>
-        
+    </div>
+   
+</div>
+<br>
+<div class="row">
+    <div class="container">
+        <button class="btn btn-primary btn-sm" (click)="logout()">LogOut</button>
     </div>
 </div>
 
