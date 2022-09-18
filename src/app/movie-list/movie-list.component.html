@@ -1,11 +1,18 @@
-<h1>Movie-list</h1>
+<h3 class="text-center mt-5">Movies list</h3>
 
-<ul *ngFor="let movie of movies" >
+<ul *ngFor="let movie of movies">
     <li>
-        <h3 (click)="movieClicked(movie)">{{ movie.title }}</h3>
-        <i class="bi bi-pen-fill" (click)="editMovie(movie)"></i>
-        <i class="bi bi-trash" (click)="deleteMovie(movie)"></i>
+        <div class="card text-bg-dark" style="width: 18rem;">
+            <img src="../images/movie.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" (click)="movieClicked(movie)">{{ movie.title }}</h5>
+              <p class="card-text">{{ movie.description }}</p>
+            <!--  <i class="bi bi-pen-fill" (click)="editMovie(movie)"></i>
+              <i class="bi bi-trash" (click)="deleteMovie(movie)"></i> -->
+            </div>
+          </div>
+        
+       
     </li>
 </ul> 
-
-<button class="btn btn-lg btn-success" (click)="newMovie()">New Movie</button>
+<!-- <button class="btn btn-lg btn-success" (click)="newMovie()">New Movie</button> -->
