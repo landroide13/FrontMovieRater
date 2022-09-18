@@ -13,7 +13,7 @@ export class ApiService {
   url = 'http://localhost:8000/';
   
   headers = new HttpHeaders({
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/json'
   })
 
   constructor( private  http: HttpClient, private cookie: CookieService) { }
@@ -39,7 +39,7 @@ export class ApiService {
   deleteMovie(id: number){
     return this.http.delete(`${this.baseUrl}${id}/`, {headers: this.getAuthHeaders()})
   }
-
+    
   rateMovie(rate: number, movieId: number){
     const body = JSON.stringify({stars: rate});
     return this.http.post(`${this.baseUrl}${movieId}/rate_movie/`, body, {headers: this.getAuthHeaders()})

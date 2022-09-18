@@ -21,7 +21,7 @@ export class AuthComponent implements OnInit {
     username: new FormControl(''),
     password: new FormControl('')
   })
-
+  
   ngOnInit(){
     const mvtoken = this.cookie.get('mv-token')
     if(mvtoken){

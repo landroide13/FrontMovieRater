@@ -13,7 +13,7 @@ export class MovieDetailsComponent implements OnInit {
   star: any;
   starMoverd = 0;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService) { }  
 
   ngOnInit() {
   }
