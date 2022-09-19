@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
       this.movies = data
      },
      error => console.log(error)
-     )
+     )  
   }
 
   selectMovie(movie:any){

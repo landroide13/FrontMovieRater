@@ -1,28 +1,31 @@
-<h1>Welcome MovieRate App</h1>
 
 
-<div class="card" style="width: 18rem;">
+<div class="row d-flex justify-content-center mt-5">
+    <div class="card text-bg-dark" style="width: 26rem;">
 
-    <div class="card-body">
+        <div class="card-body">
 
-        <form action="" [formGroup]="authForm" (submit)="saveForm()">
+            <h3 class="card-title text-center">Welcome MovieRate App</h3>
 
-            <div class="mb-3">
-                <label for="title" class="form-label">User Name</label>
-                <input type="username" class="form-control" formControlName="username">
-            </div>
+            <form action="" [formGroup]="authForm" (submit)="saveForm()">
 
-            <div class="mb-3"> 
-                <label for="description" class="form-label">Password</label>
-                <input type="password" class="form-control" formControlName="password">
-            </div>
+                <div class="mb-3">
+                    <label for="title" class="form-label">User Name</label>
+                    <input type="username" class="form-control" formControlName="username">
+                </div>
 
-            <button type="submit" class="btn btn-primary">
-                Log In 
-            </button>
+                <div class="mb-3"> 
+                    <label for="description" class="form-label">Password</label>
+                    <input type="password" class="form-control" formControlName="password">
+                </div>
 
-        </form>
+                <button type="submit" class="btn btn-primary">
+                    Log In 
+                </button>
 
-    </div>
-    
-</div>    
+            </form>
+
+        </div>
+        
+    </div> 
+</div>   
