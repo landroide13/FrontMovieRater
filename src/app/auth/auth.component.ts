@@ -21,6 +21,8 @@ export class AuthComponent implements OnInit {
     username: new FormControl(''),
     password: new FormControl('')
   })
+
+  registerMode = false
   
   ngOnInit(){
     const mvtoken = this.cookie.get('mv-token')
@@ -30,15 +32,32 @@ export class AuthComponent implements OnInit {
   }
 
   saveForm(){
+    if(!this.registerMode){
+      this.login();
+      console.log(this.authForm.value.username)
+    }else{
+      this.api.registerUser(this.authForm.value).subscribe(
+        (res: any) => {
+          console.log(res);
+          this.login();
+        },
+        err => console.log(err)
+      )
+      console.log(this.authForm.value.username)
+    } 
+  }
+
+  login(){
     this.api.loginUser(this.authForm.value).subscribe(
       (res: any) => {
         console.log(res);
-        this.router.navigate(['/movies']);
         this.cookie.set('mv-token', res.token);
+        this.router.navigate(['/movies']);
       },
       err => console.log(err)
     )
-    console.log(this.authForm.value)
   }
+
+ 
 
 }

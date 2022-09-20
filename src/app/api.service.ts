@@ -50,6 +50,11 @@ export class ApiService {
     return this.http.post(`${this.url}auth/`, body, {headers: this.headers})
   }
 
+  registerUser(authData: any){
+    const body = JSON.stringify(authData);
+    return this.http.post(`${this.url}api/users/`, body, {headers: this.headers})
+  }
+
   getAuthHeaders(){
     const token = this.cookie.get('mv-token');
     return new HttpHeaders({

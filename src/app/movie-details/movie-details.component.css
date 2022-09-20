@@ -3,7 +3,13 @@ i.orange{
     color: orange;
 }
 
+i{
+    cursor: pointer;
+}
 
+#irate{
+    font-size: 1.5em;
+}
 
 
 

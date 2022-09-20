@@ -11,7 +11,7 @@ export class MovieDetailsComponent implements OnInit {
   @Input() movie:any;
   @Output() updateMovie = new EventEmitter();
   star: any;
-  starMoverd = 0;
+  starMoverd = 0;  
 
   constructor(private api: ApiService) { }  
 
@@ -20,7 +20,7 @@ export class MovieDetailsComponent implements OnInit {
 
   starHover(star: any){
     this.starMoverd = star
-    console.log(star)
+    //console.log(star)
   }
 
   starClick(star: any){

@@ -5,7 +5,7 @@
 
         <div class="card-body">
 
-            <h3 class="card-title text-center">Welcome MovieRate App</h3>
+            <h3 class="card-title text-center">Welcome Movie Rater App</h3>
 
             <form action="" [formGroup]="authForm" (submit)="saveForm()">
 
@@ -20,11 +20,14 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">
-                    Log In 
+                   <span *ngIf="!registerMode">Log In</span>  
+                   <span *ngIf="registerMode">Register</span>  
                 </button>
 
             </form>
 
+            <span *ngIf="!registerMode" href="#" (click)="registerMode = true">Don't have an account? Register Here</span>
+            <span *ngIf="registerMode" href="#" (click)="registerMode = false">Already have an account? Log In Here</span>
         </div>
         
     </div> 
